@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Emergencias - Registro Rápido (Mejorado)</title>
+    <link rel="stylesheet" href="css\formu.css">
+</head>
+<body>
+
+    <header>
+        <h1>Panel de Emergencias - Registro Rápido</h1>
+    </header>
+
+    <div class="main-container">
+
+        <section class="panel high-priority-patient">
+            <h2>Paciente de Alta Prioridad</h2>
+            <div class="input-group">
+                <label for="paciente-id">Nombre / ID del Paciente</label>
+                <input type="text" id="paciente-id" placeholder="Ej: L. Quispe (F, 31)">
+            </div>
+            
+            <div class="input-group">
+                <label for="diagnostico">Diagnóstico breve</label>
+                <textarea id="diagnostico" rows="2" placeholder="Ej: Pre-eclampsia severa, TA elevada..."></textarea>
+            </div>
+
+            <div class="input-group priority-group">
+                <label>Prioridad</label>
+                <select id="prioridad" class="select-priority">
+                    <option value="normal">Normal</option>
+                    <option value="urgente">Urgente</option>
+                    <option value="critico" selected>CRÍTICO</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="ubicacion">Ubicación / Box</label>
+                <input type="text" id="ubicacion" placeholder="Ej: UCI-03 / Trauma Shock">
+            </div>
+
+            <div class="input-group">
+                <label for="tiempo-espera">Tiempo de espera aprox. (min)</label>
+                <input type="number" id="tiempo-espera" value="12" placeholder="Ej: 12">
+            </div>
+
+            <button class="btn btn-primary">Registrar Paciente</button>
+        </section>
+
+        <section class="panel critical-resources">
+            <h2>Recursos Críticos</h2>
+            <p class="availability-status">Disponibilidad Inmediata</p>
+            
+            <div class="input-group">
+                <label for="recurso">Recurso</label>
+                <select id="recurso">
+                    <option>Oxígeno Portátil</option>
+                    <option>Desfibrilador</option>
+                    <option>Cama UCI</option>
+                </select>
+            </div>
+
+            <div class="input-group resource-detail">
+                <label for="cantidad">Cantidad disponible</label>
+                <input type="number" id="cantidad" value="4" placeholder="Ej: 4">
+            </div>
+
+            <div class="input-group">
+                <label for="estado-recurso">Estado</label>
+                <select id="estado-recurso">
+                    <option selected>Normal</option>
+                    <option>Bajo</option>
+                    <option>Agotado</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="comentario-recurso">Comentario Interno</label>
+                <textarea id="comentario-recurso" rows="2" placeholder="Ej: Pedido a Farmacia Central"></textarea>
+            </div>
+            
+            <button class="btn btn-secondary">Actualizar Stock</button>
+        </section>
+
+        <section class="panel on-call-staff">
+            <h2>Personal de Guardia</h2>
+            
+            <div class="input-group">
+                <label for="nombre-personal">Nombre / Grado</label>
+                <input type="text" id="nombre-personal" placeholder="Ej: Dra. S. Aguilar">
+            </div>
+
+            <div class="input-group">
+                <label for="rol-personal">Rol / Especialidad</label>
+                <input type="text" id="rol-personal" placeholder="Ej: Emergencióloga Jefe / Cardiología / Enfermería UCI">
+            </div>
+
+            <div class="input-group">
+                <label for="area-personal">Área asignada</label>
+                <input type="text" id="area-personal" placeholder="Ej: UCI Adultos / Trauma Shock / Pediatría">
+            </div>
+
+            <div class="input-group">
+                <label for="horario-personal">Horario</label>
+                <input type="text" id="horario-personal" placeholder="Ej: 22:00 - 06:00">
+            </div>
+
+            <button class="btn btn-tertiary">Agregar al Turno</button>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Panel de Emergencias - Formulario Paciente - Formulario Recursos - Formulario Personal (Diseño basado en Flex y Grid)</p>
+    </footer>
+
+    
+</body>
+</html>
